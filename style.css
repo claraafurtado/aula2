@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   padding-block: 16px;
+   gap: 20px;
+
+}
+.item{
+    height: 150px;
+    width: 80%;
+    background-color: rgb(236, 193, 113);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 32px;
+    border-radius: 40px;
+}
+.texto{
+    color: white;
+    font-size: 64px;
+
+}
+.forma{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(242, 240, 173);
+    cursor: pointer;
+    transition: 2s;
+}
+.vermelho{
+    background-color: rgb(255, 157, 0);
+
+}
+.circulo{
+    border-radius: 50%;
+}
+
+.desaparecer{
+    opacity: 0;
+}
+     
+
+.img{
+    background-image: url(imagem1.PNG);
+    background-size: cover;
+    transition: 1s;
+}
+.pulsando {
+    animation: pulse 1s ease-in-out infinite; 
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); 
+    }
+}
+    .girar{
+        transform: rotate(360deg);
+    }
+    .pulando {
+        animation: jump 0.5s ease-in-out;
+    }
+    @keyframes jump {
+        0%, 100% {
+            transform: translateY(0); 
+        }
+        25% {
+            transform: translateY(-30px); 
+        }
+        75% {
+            transform: translateY(30px); 
+        }
+    }
+    .trapezio{
+        -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+     clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+     transition: 2s;
+    }
+    
